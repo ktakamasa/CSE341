@@ -1,0 +1,15 @@
+//LOCALHOST 
+###GET ALL###
+http://localhost:3000/contacts/
+###GET KOH###
+http://localhost:3000/contacts/6480d0861951326bc9cb03c3
+###GET JAQUELINE###
+http://localhost:3000/contacts/6480d16e1951326bc9cb03c5
+###GET NAOYA###
+http://localhost:3000/contacts/6480d19e1951326bc9cb03c7
+###GET MARIA###
+http://localhost:3000/contacts/6480d1d71951326bc9cb03c8
+###GET ERIKA###
+http://localhost:3000/contacts/6480d2061951326bc9cb03ca
+###GET MIKE###
+http://localhost:3000/contacts/6480d2541951326bc9cb03cc
