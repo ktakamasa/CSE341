@@ -1,5 +1,5 @@
 //LOCALHOST 
-###GET ALL###
+###GET ALL### 
 http://localhost:3000/contacts/
 ###GET KOH###
 http://localhost:3000/contacts/6480d0861951326bc9cb03c3
@@ -13,3 +13,19 @@ http://localhost:3000/contacts/6480d1d71951326bc9cb03c8
 http://localhost:3000/contacts/6480d2061951326bc9cb03ca
 ###GET MIKE###
 http://localhost:3000/contacts/6480d2541951326bc9cb03cc
+
+//RENDER 
+###GET ALL###
+https://cse341-takamasa.onrender.com/contacts
+###GET KOH###
+https://cse341-takamasa.onrender.com/contacts/6480d0861951326bc9cb03c3
+###GET JAQUELINE###
+https://cse341-takamasa.onrender.com/contacts/6480d16e1951326bc9cb03c5
+###GET NAOYA###
+https://cse341-takamasa.onrender.com/contacts/6480d19e1951326bc9cb03c7
+###GET MARIA###
+https://cse341-takamasa.onrender.com/contacts/6480d1d71951326bc9cb03c8
+###GET ERIKA###
+https://cse341-takamasa.onrender.com/contacts/6480d2061951326bc9cb03ca
+###GET MIKE###
+https://cse341-takamasa.onrender.com/contacts/6480d2541951326bc9cb03cc
