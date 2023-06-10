@@ -45,6 +45,7 @@ const createContact = async (req, res, next) => {
     .insertOne(contact);
   if (response.acknowledged) {
     console.log('Created successfully');
+    res.setHeader('Content-Type', 'application/json');
     res.status(201).json(response);
   } else {
     res.status(500).json(response.error || 'An error occurred!');
@@ -69,7 +70,8 @@ const updateContact = async (req, res, next) => {
   console.log(response);
   if (response.modifiedCount === 1) {
     console.log('Updated successfully');
-    res.status(204).send;
+    res.setHeader('Content-Type', 'application/json');
+    res.status(204).json(response).send;
   } else {
     res.status(500).json(response.error || 'An error occurred!');
   }
@@ -85,7 +87,8 @@ const deleteContact = async (req, res, next) => {
     .deleteOne({ _id: userId });
   if (response.deletedCount === 1) {
     console.log('Deleted successfully');
-    res.status(200).send;
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(response).send;
   } else {
     res.status(500).json(response.error || 'An error occurred!');
   }
