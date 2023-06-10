@@ -85,7 +85,7 @@ const deleteContact = async (req, res, next) => {
     .deleteOne({ _id: userId });
   if (response.deletedCount === 1) {
     console.log('Deleted successfully');
-    res.status(204).send;
+    res.status(200).send;
   } else {
     res.status(500).json(response.error || 'An error occurred!');
   }
