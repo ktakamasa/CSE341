@@ -5,14 +5,19 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-ktakamasa.onrender.com",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": [
+    "https",
+    "http"
+  ],
   "paths": {
     "/contacts/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -22,7 +27,9 @@
       },
       "post": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "body",
@@ -62,7 +69,9 @@
     "/contacts/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -79,7 +88,9 @@
       },
       "put": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -123,7 +134,9 @@
       },
       "delete": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
