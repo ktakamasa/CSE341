@@ -10,6 +10,6 @@ const router = require('express').Router();
 router.use('/contacts', require('./contacts'));
 
 // Use swagger
-router.use('/api-docs', require('./swagger'));
+router.use('/', require('./swagger'));
 
 module.exports = router;
