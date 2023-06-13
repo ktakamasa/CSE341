@@ -7,9 +7,9 @@
   },
   "host": "cse341-takamasa.onrender.com",
   "basePath": "/",
-  "schemes": ["https", "http"],
+  "schemes": ["https"],
   "paths": {
-    "/api-docs": {
+    "/docs": {
       "get": {
         "description": "",
         "parameters": [],
