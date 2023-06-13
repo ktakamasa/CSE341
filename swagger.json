@@ -8,7 +8,8 @@
   "host": "cse341-takamasa.onrender.com",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/contacts/": {
