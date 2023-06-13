@@ -6,7 +6,6 @@ const router = require('express').Router();
 // router.get('/jaqueline', lesson1Controller.jaquelineRoute);
 // router.get('/koh', lesson1Controller.kohRoute);
 
-
 // Use swagger
 router.use('/', require('./swagger'));
 
