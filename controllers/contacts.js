@@ -2,7 +2,7 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 // gets all data from the database
-const getAllContacts = async (req, res) => {
+const getAllContacts = async (req, res, next) => {
   try {
     const result = await mongodb
       .getDb()
@@ -20,7 +20,7 @@ const getAllContacts = async (req, res) => {
 };
 
 // gets single data from the database
-const getSingleContact = async (req, res) => {
+const getSingleContact = async (req, res, next) => {
   try {
     const userId = new ObjectId(req.params.id);
     const result = await mongodb
@@ -39,7 +39,7 @@ const getSingleContact = async (req, res) => {
 };
 
 // create new contact in the database
-const createContact = async (req, res) => {
+const createContact = async (req, res, next) => {
   try {
     const contact = {
       firstName: req.body.firstName,
@@ -69,8 +69,8 @@ const createContact = async (req, res) => {
   }
 };
 
-// update contact\ by id in the database
-const updateContact = async (req, res) => {
+// update contact by id in the database
+const updateContact = async (req, res, next) => {
   try {
     const userId = new ObjectId(req.params.id);
     const contact = {
@@ -100,7 +100,7 @@ const updateContact = async (req, res) => {
 };
 
 // delete contact by id in the database
-const deleteContact = async (req, res) => {
+const deleteContact = async (req, res, next) => {
   try {
     const userId = new ObjectId(req.params.id);
     const response = await mongodb
