@@ -76,3 +76,6 @@ content-type: application/json
 
 ### DELETE delete contact by id
 DELETE https://cse341-takamasa.onrender.com/contacts/64872f63e21880bbe091034e HTTP/1.1
+
+### GET api-docs
+GET https://cse341-takamasa.onrender.com/api-docs
