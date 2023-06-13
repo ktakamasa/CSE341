@@ -1,3 +1,4 @@
+// eslint-disable-next-line node/no-unpublished-require
 const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
