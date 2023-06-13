@@ -1,4 +1,3 @@
-// eslint-disable-next-line node/no-unpublished-require
 const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
@@ -6,7 +5,7 @@ const doc = {
     title: 'My API',
     description: 'Contacts API'
   },
-  host: 'cse-takamasa.onrender.com',
+  host: 'cse341-takamasa.onrender.com',
   schemes: ['https', 'http']
 };
 

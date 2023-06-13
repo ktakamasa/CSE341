@@ -5,7 +5,7 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse-takamasa.onrender.com",
+  "host": "cse341-takamasa.onrender.com",
   "basePath": "/",
   "schemes": [
     "https",
@@ -161,7 +161,7 @@
         }
       }
     },
-    "/api-docs": {
+    "/docs": {
       "get": {
         "description": "",
         "parameters": [],
