@@ -6,10 +6,11 @@ const router = require('express').Router();
 // router.get('/jaqueline', lesson1Controller.jaquelineRoute);
 // router.get('/koh', lesson1Controller.kohRoute);
 
-// W01 L02
-router.use('/contacts', require('./contacts'));
 
 // Use swagger
 router.use('/', require('./swagger'));
+
+// W01 L02
+router.use('/contacts', require('./contacts'));
 
 module.exports = router;
