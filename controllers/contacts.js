@@ -4,15 +4,18 @@ const ObjectId = require('mongodb').ObjectId;
 // gets all data from the database
 const getAllContacts = async (req, res, next) => {
   try {
-    const result = await mongodb
+    mongodb
       .getDb()
       .db('CSE341')
       .collection('contacts')
-      .find();
-    result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists);
-    });
+      .find()
+      .toArray((err, lists) => {
+        if (err) {
+          res.status(500).json({ error: err });
+        }
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(lists);
+      });
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: err });
@@ -22,16 +25,22 @@ const getAllContacts = async (req, res, next) => {
 // gets single data from the database
 const getSingleContact = async (req, res, next) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid contact id to find a contact.');
+    }
     const userId = new ObjectId(req.params.id);
-    const result = await mongodb
+    mongodb
       .getDb()
       .db('CSE341')
       .collection('contacts')
-      .find({ _id: userId });
-    result.toArray().then((lists) => {
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists[0]);
-    });
+      .find({ _id: userId })
+      .toArray((err, lists) => {
+        if (err) {
+          res.status(500).json({ error: err });
+        }
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(lists[0]);
+      });
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: err });
@@ -72,6 +81,9 @@ const createContact = async (req, res, next) => {
 // update contact by id in the database
 const updateContact = async (req, res, next) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid contact id to update a contact.');
+    }
     const userId = new ObjectId(req.params.id);
     const contact = {
       firstName: req.body.firstName,
@@ -102,6 +114,9 @@ const updateContact = async (req, res, next) => {
 // delete contact by id in the database
 const deleteContact = async (req, res, next) => {
   try {
+    if (!ObjectId.isValid(req.params.id)) {
+      res.status(400).json('Must use a valid contact id to delete a contact.');
+    }
     const userId = new ObjectId(req.params.id);
     const response = await mongodb
       .getDb()
